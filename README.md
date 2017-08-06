@@ -14,11 +14,11 @@ stawka za m2
 
 ### metody:
 
--__init__
+- __init__
 
 - __str__ zwracająca stringa z pełnymi danymi mieszkańca
 
--calculate_rent - zwraca integera wysokość czynszu
+- calculate_rent - zwraca integera wysokość czynszu
 
 obsługa budynku:
 
@@ -36,7 +36,7 @@ stawka godzinowa
 
 ### metody:
 
--__init__
+- __init__
 
 - __str__ zwracająca stringa z pełnymi danymi pracownika
 
@@ -56,16 +56,16 @@ lista mieszkańców
 
 ### metody:
 
--__init__
+- __init__
 
--add_employee
+- add_employee
 
--add_resident
+- add_resident
 
--save_community_to_file
+- save_community_to_file
 
--read_community_from_file
+- read_community_from_file
 
--find_longest_working_employee
+- find_longest_working_employee
 
--calculate_total_community_area
+- calculate_total_community_area
