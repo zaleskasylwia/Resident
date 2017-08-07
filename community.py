@@ -5,7 +5,13 @@ class Community:
         self.employees = employees or []
         self.residents = residents or []
 
-    def add_employee(self):
+    def add_employee(self, employee):
         #czy tu mam dodawać przez klase Employee?
         if employee not in self.employees:
             self.employees.append(employee)
+
+    def add_resident(self, resident):
+        if resident not in self.residents:
+            self.residents.append(resident)
+
+    
