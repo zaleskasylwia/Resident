@@ -16,5 +16,5 @@ class Employee(Person):
             return int(self.rate_per_hour * working_hours)
         return None
 
-    def __gt__(self, other):
-        return self.year_of_emp > other.year_of_emp
+    def __lt__(self, other):
+        return self.year_of_emp < other.year_of_emp
