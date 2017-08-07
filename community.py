@@ -14,4 +14,14 @@ class Community:
         if resident not in self.residents:
             self.residents.append(resident)
 
-    
+    def save_community_to_file(self):
+        pass
+
+    def read_community_from_file(self):
+        pass
+
+    def find_longest_working_employee(self):
+        pass
+
+    def calculate_total_community_area(self):
+        pass
