@@ -4,3 +4,8 @@ class Community:
         self.address = address
         self.employees = employees or []
         self.residents = residents or []
+
+    def add_employee(self):
+        #czy tu mam dodawać przez klase Employee?
+        if employee not in self.employees:
+            self.employees.append(employee)
