@@ -1,9 +1,9 @@
 class Community:
-    def __init__(self, year_of_fundation, address, employees=None, residents=None):
+    def __init__(self, year_of_fundation, address, employees=[], residents=[]):
         self.year_of_fundation = year_of_fundation
         self.address = address
-        self.employees = employees or []
-        self.residents = residents or []
+        self.employees = employees
+        self.residents = residents
 
     def add_employee(self, employee):
         #czy tu mam dodawać przez klase Employee?
