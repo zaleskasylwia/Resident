@@ -25,12 +25,18 @@ class Community:
     def save_community_to_file(self):
         HEADERS = ['Community name', 'Year of fundation', 'address']
         with open('{}.csv'.format(self.community_name), 'w', newline='') as csvfile:
-            communitywriter = csv.writer(csvfile)
-            communitywriter.writerow(HEADERS)
-            communitywriter.writerow([self.community_name, self.year_of_fundation, self.address, ""])
+            community_writer = csv.writer(csvfile)
+            community_writer.writerow(HEADERS)
+            community_writer.writerow([self.community_name, self.year_of_fundation, self.address])
 
-    def read_community_from_file(self):
-        pass
+    def read_community_from_file(self, csv_path):
+        community = []
+        with open(csv_path) as csvfile:
+            community_reader = csv.reader(csvfile)
+            next(community_reader)  # skip heades
+            for data in community_reader:
+                community.append(data)
+        return community
 
     def find_longest_working_employee(self):
         pass
@@ -41,3 +47,15 @@ class Community:
             total_community_area += flat_area
 
         return total_community_area
+
+
+def main():
+    com = Community("Nauczyciela", 2014, "Szkolan 41 Oświęcim")
+    com.save_community_to_file()
+    ab = Community("Na", 2014, "Kraków")
+    ab.save_community_to_file()
+    print(com.read_community_from_file("Nauczyciela.csv"))
+    print(ab.read_community_from_file("Na.csv"))
+
+if __name__ == "__main__":
+    main()
