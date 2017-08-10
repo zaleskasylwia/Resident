@@ -30,4 +30,9 @@ class Community:
         pass
 
     def calculate_total_community_area(self):
-        pass
+        total_community_area = 0
+        for flat_area in self.resident:
+            total_community_area += flat_area
+
+        return total_community_area
+
