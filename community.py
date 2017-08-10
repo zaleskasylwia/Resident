@@ -1,12 +1,18 @@
 class Community:
-    def __init__(self, year_of_fundation, address, employees=[], residents=[]):
-        self.year_of_fundation = year_of_fundation
-        self.address = address
-        self.employees = employees
-        self.residents = residents
+
+    def __init__(self, community_name, year_of_fundation, address):
+        if type(community_name) is str and type(year_of_fundation) is int and
+           type(address) is str and type(employees is list and type(residents) is list:
+            self.community_name=community_name
+            self.year_of_fundation=year_of_fundation
+            self.address=address
+            self.employees=[]
+            self.residents=[]
+        else:
+            raise TypeError
 
     def add_employee(self, employee):
-        #czy tu mam dodawać przez klase Employee?
+        # czy tu mam dodawać przez klase Employee?
         if employee not in self.employees:
             self.employees.append(employee)
 
