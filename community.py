@@ -1,8 +1,10 @@
+import csv
+
+
 class Community:
 
     def __init__(self, community_name, year_of_fundation, address):
-        if type(community_name) is str and type(year_of_fundation) is int and
-           type(address) is str and type(employees is list and type(residents) is list:
+        if type(community_name) is str and type(year_of_fundation) is int and type(address) is str:
             self.community_name=community_name
             self.year_of_fundation=year_of_fundation
             self.address=address
@@ -21,7 +23,11 @@ class Community:
             self.residents.append(resident)
 
     def save_community_to_file(self):
-        pass
+        HEADERS = ['Community name', 'Year of fundation', 'address']
+        with open('{}.csv'.format(self.community_name), 'w', newline='') as csvfile:
+            communitywriter = csv.writer(csvfile)
+            communitywriter.writerow(HEADERS)
+            communitywriter.writerow([self.community_name, self.year_of_fundation, self.address, ""])
 
     def read_community_from_file(self):
         pass
@@ -35,4 +41,3 @@ class Community:
             total_community_area += flat_area
 
         return total_community_area
-
