@@ -11,10 +11,11 @@ class Employee(Person):
     def __str__(self):
         return "{} {} {} {} {}".format(self.first_name, self.last_name, self.position, self.year_of_emp, self.rate_per_hour)
 
-    def calucalte_salary(self, working_hours):
-        if working_hours.isdigit():
+    def caluclate_salary(self, working_hours):
+        if type(working_hours) is int or type(working_hours) is float:
             return int(self.rate_per_hour * working_hours)
-        return None
+        else:
+            raise TypeError
 
     def __lt__(self, other):
         return self.year_of_emp < other.year_of_emp
