@@ -39,7 +39,14 @@ class Community:
         return community
 
     def find_longest_working_employee(self):
-        pass
+        if self.employeess == []:
+            raise IndexError
+        else:
+            longest_working_employee = self.employees[0]
+            for emply in self.employees:
+                if emply < longest_working_employee:
+                    longest_working_employee = emply
+            return longest_working_employee
 
     def calculate_total_community_area(self):
         total_community_area = 0
